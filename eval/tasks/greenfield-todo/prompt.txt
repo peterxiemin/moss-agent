@@ -1,0 +1,1 @@
+在当前目录从零实现一个命令行待办工具：todo.mjs（ESM），支持 add <任务> / list / done <编号> 三个子命令，数据持久化到 todos.json。然后编写 test.mjs，用 node:test 和 node:assert 覆盖 add/list/done 的核心逻辑，并用 node --test 跑通全部测试。最后告诉我测试结果。

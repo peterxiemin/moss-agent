@@ -1,0 +1,1 @@
+这个项目是购物车计算库（cart.mjs），已有测试全部通过。请给它增加一个功能：导出函数 applyCoupon(total, code)，当 code 为 "SAVE10" 时返回 total 打 9 折的金额（保留两位小数），其他 code 返回原 total。为新功能编写测试（新建 coupon.test.mjs，不要改动已有的 cart.test.mjs），并确保 npm test 全部通过。

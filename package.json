@@ -1,0 +1,50 @@
+{
+  "name": "moss-agent",
+  "version": "0.2.0",
+  "description": "A simplified Claude Code-like AI coding agent, powered by Kimi K2.7 Code",
+  "author": "peterxiemin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterxiemin/moss-agent.git"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "bin": {
+    "moss": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run tests",
+    "eval": "node eval/run.mjs",
+    "postinstall": "node scripts/fix-node-pty.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^12.1.0",
+    "diff": "^8.0.4",
+    "fast-glob": "^3.3.3",
+    "marked": "^15.0.12",
+    "marked-terminal": "^7.3.0",
+    "openai": "^4.77.0"
+  },
+  "devDependencies": {
+    "@types/diff": "^7.0.2",
+    "@types/node": "^22.10.0",
+    "node-pty": "^1.1.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.10"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
